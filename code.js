@@ -1,5 +1,8 @@
 let data;
 let strOfArr = '';
+let strOfArr2 = '';
+let strOfArr3 = '';
+let arr = ["words1", "words2", "words3"];
 
 function readJsonFile(jsonFile, callback, ) {
     let _file = new XMLHttpRequest();
@@ -18,5 +21,16 @@ function main() {
     readJsonFile("./words.json", function (text, ) {
         data = JSON.parse(text, );
         console.log(data);
+        arrAtr();
     });
+};
+
+function arrAtr() {
+
+    strOfArr  = data[arr[0]] + ','; // !!!: alert
+    strOfArr2 = data[arr[1]] + ','; // !!!: alert
+    strOfArr3 = data[arr[2]] + ','; // !!!: alert
+
+    console.log(`${strOfArr} ${strOfArr2} ${strOfArr3}`);
+
 };
