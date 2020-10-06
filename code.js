@@ -32,5 +32,6 @@ function arrAtr() {
     strOfArr3 = data[arr[2]] + ','; // !!!: alert
 
     strOfArr = strOfArr.concat(strOfArr2, strOfArr3);
+    strOfArr = strOfArr.slice( 0, strOfArr.length - 1, );
     console.log(strOfArr);
 };
