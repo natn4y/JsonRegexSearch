@@ -55,4 +55,8 @@ function printHTML() {
         arrFiltered = arrFiltered.replace('null', '');
         arrFiltered += element.match(regexp);
     });
+    
+    arrFiltered = arrFiltered.slice(0, arrFiltered.length - 1, );
+    console.log(arrFiltered);
+    
 };
