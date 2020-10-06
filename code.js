@@ -33,15 +33,14 @@ function arrAtr() {
     strOfArr3 = data[arr[2]] + ','; // !!!: alert
 
     strOfArr = strOfArr.concat(strOfArr2, strOfArr3);
-    strOfArr = strOfArr.slice(0, strOfArr.length - 1, );
-    console.log(strOfArr);
     printHTML();
 };
 
 function printHTML() {
     let textfield;
     let regexp;
-
+    let arrFiltered = '';
+    
     textfield = document.getElementById('regexInput').value;
 
     if (document.getElementById('checkSearch1').checked == true) {
@@ -50,5 +49,10 @@ function printHTML() {
         regexp = new RegExp(`\\.*.*${textfield}\\b`, 'gi');
     }
     arrOfStr = strOfArr.split(',').sort();
-    console.log(arrOfStr);
+
+    // remove null and undefined values
+    arrOfStr.forEach(element => {
+        arrFiltered = arrFiltered.replace('null', '');
+        arrFiltered += element.match(regexp);
+    });
 };
