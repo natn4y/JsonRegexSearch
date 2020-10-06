@@ -3,6 +3,7 @@ let strOfArr = '';
 let strOfArr2 = '';
 let strOfArr3 = '';
 let arr = ["words1", "words2", "words3"];
+let i = 0;
 
 function readJsonFile(jsonFile, callback, ) {
     let _file = new XMLHttpRequest();
@@ -34,4 +35,12 @@ function arrAtr() {
     strOfArr = strOfArr.concat(strOfArr2, strOfArr3);
     strOfArr = strOfArr.slice( 0, strOfArr.length - 1, );
     console.log(strOfArr);
+    printHTML();
+};
+
+function printHTML() {
+    let textfield;
+    
+    textfield = document.getElementById('regexInput').value;
+    textfield = document.getElementById('regexInput').value;
 };
