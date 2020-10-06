@@ -28,19 +28,26 @@ function main() {
 
 function arrAtr() {
 
-    strOfArr  = data[arr[0]] + ','; // !!!: alert
+    strOfArr = data[arr[0]] + ','; // !!!: alert
     strOfArr2 = data[arr[1]] + ','; // !!!: alert
     strOfArr3 = data[arr[2]] + ','; // !!!: alert
 
     strOfArr = strOfArr.concat(strOfArr2, strOfArr3);
-    strOfArr = strOfArr.slice( 0, strOfArr.length - 1, );
+    strOfArr = strOfArr.slice(0, strOfArr.length - 1, );
     console.log(strOfArr);
     printHTML();
 };
 
 function printHTML() {
     let textfield;
+    let regexp;
+
+    textfield = document.getElementById('regexInput').value;
+
+    if (document.getElementById('checkSearch1').checked == true) {
+        regexp = new RegExp(`\\.*.*${textfield}\\.*.*`, 'gi');
+    } else if (document.getElementById('checkSearch2').checked == true) {
+        regexp = new RegExp(`\\.*.*${textfield}\\b`, 'gi');
+    }
     
-    textfield = document.getElementById('regexInput').value;
-    textfield = document.getElementById('regexInput').value;
 };
