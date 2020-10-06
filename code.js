@@ -53,7 +53,7 @@ function printHTML() {
     // remove null and undefined values
     arrOfStr.forEach(element => {
         arrFiltered = arrFiltered.replace('null', '');
-        arrFiltered += element.match(regexp);
+        arrFiltered += element.match(regexp) + ',';
     });
 
     arrFiltered = arrFiltered.slice(0, arrFiltered.length - 1, );
@@ -66,4 +66,11 @@ function printHTML() {
         arrFiltered.pop();
     }
     console.log(arrFiltered);
+
+    // show result
+    let res = '';
+    arrFiltered.forEach(element => {
+        res += `${element} <br>`
+    })
+    document.getElementById('result').innerHTML = res;
 };
