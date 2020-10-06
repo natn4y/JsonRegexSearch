@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="code.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="radio" name="checkSearch" id="checkSearch1" checked="true">
+    <label for="checkSearch1">Em toda parte</label>
+    <input type="radio" name="checkSearch" id="checkSearch2">
+    <label for="checkSearch2">Últimas letras</label>
+    <br><br>
+    <input type="text" name="regexInput" id="regexInput" class="regexInput"
+    placeholder="Digite algo..." value="" onchange="main();">
+    <button id="search" onclick="main();">pesquisar</button>
+    <div id="result" style="margin-top: 20px;"></div>
+</body>
+
+</html>
