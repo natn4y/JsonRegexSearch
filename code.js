@@ -40,7 +40,7 @@ function printHTML() {
     let textfield;
     let regexp;
     let arrFiltered = '';
-    
+
     textfield = document.getElementById('regexInput').value;
 
     if (document.getElementById('checkSearch1').checked == true) {
@@ -55,8 +55,15 @@ function printHTML() {
         arrFiltered = arrFiltered.replace('null', '');
         arrFiltered += element.match(regexp);
     });
-    
+
     arrFiltered = arrFiltered.slice(0, arrFiltered.length - 1, );
     console.log(arrFiltered);
-    
+
+    // transform in array
+    arrFiltered = arrFiltered.split(',');
+    arrFiltered = arrFiltered.filter(n => n);
+    if (arrFiltered.includes('null')) {
+        arrFiltered.pop();
+    }
+    console.log(arrFiltered);
 };
