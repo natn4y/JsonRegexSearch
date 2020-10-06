@@ -49,5 +49,6 @@ function printHTML() {
     } else if (document.getElementById('checkSearch2').checked == true) {
         regexp = new RegExp(`\\.*.*${textfield}\\b`, 'gi');
     }
-    
+    arrOfStr = strOfArr.split(',').sort();
+    console.log(arrOfStr);
 };
